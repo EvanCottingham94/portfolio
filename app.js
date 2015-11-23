@@ -1,5 +1,5 @@
 // Create app
-var myApp = angular.module('myApp', ['ui.router'])
+var myApp = angular.module('myApp', ['ui.router', 'firebase'])
 // Configure app
 myApp.config(function($stateProvider){
     $stateProvider
@@ -7,29 +7,54 @@ myApp.config(function($stateProvider){
             url:'/',
             templateUrl: 'templates/home.html',
             controller: 'HomeController',
-        }).state('content',{
-            url:'/content',
-            templateUrl:'templates/contact.html',
-            controller: 'ContactController',
-        }).state('about',{
-            url:'/about',
-            templateUrl:'templates/about.html',
-            controller:'AboutController'
+        }).state('projects',{
+            url:'/projects',
+            templateUrl:'templates/projects.html',
+            controller: 'ProjectsController',
+        }).state('comments',{
+            url:'/comments',
+            templateUrl:'templates/comments.html',
+            controller:'CommentsController'
         })
 })
 
 // Landing page controller: define $scope.number as a number
-.controller('HomeController',function($scope){
-    $scope.number= 6;
-})
+.controller('HomeController',function($scope, $firebaseArray){
+	
+	var ref = new Firebase('https://evancportfolio.firebaseio.com/');
 
-// About page controller: define $scope.about as a string
-.controller('AboutController', function($scope){
-    $scope.about='Expression from Angular';
+	var projRef = ref.child('projects');
+	
+	$scope.projects = $firebaseArray(projRef);
 })
-
 
 // Content controller: define $scope.url as an image
-.controller('ContactController', function($scope){
-    $scope.url = 'http://coolwildlife.com/wp-content/uploads/galleries/post-1593/Brown%20Bear%20Picture%20001.jpg'
+.controller('ProjectsController', function($scope, $firebaseArray){
+    var ref = new Firebase('https://evancportfolio.firebaseio.com/');
+
+	var projRef = ref.child('projects');
+	
+	$scope.projects = $firebaseArray(projRef);
+})
+
+.controller('CommentsController', function($scope, $firebaseArray) {
+	var ref = new Firebase('https://evancportfolio.firebaseio.com/');
+	
+	var commRef = ref.child('comments'); 
+	
+	$scope.comments = $firebaseArray(commRef);
+	
+	$scope.comment = function() {
+		// Add a new object to the comments array using the firebaseArray .$add method. 		
+		$scope.comments.$add({
+			text:$scope.newComment,
+			name:$scope.name,
+			time:Firebase.ServerValue.TIMESTAMP
+		})
+		
+		// Once the comment is saved, reset the value of $scope.newComment to empty string
+		.then(function() {
+			$scope.newComment = ''
+		})
+	}
 })

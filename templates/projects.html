@@ -1,0 +1,7 @@
+<h1> My Projects </h1>
+
+<div ng-controller="ProjectsController" class="well well-sm" ng-repeat="project in projects">
+	<h2 id="projtitle">{{project.title}}</h2><br>
+	<a href="{{project.link}}" target="_blank"><img id="projImg" class="img-thumbnail" ng-src="{{project.image}}" width=80% height=80%></img></a>
+	<p id='projdesc'>{{project.descrip}}</p>
+</div>	

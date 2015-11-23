@@ -1,1 +1,15 @@
-<h1> HOME </h1>
+<h1> WELCOME </h1>
+<h2 id="subtitle">To Evan Cottingham's Portfolio</h2>
+
+<div id="slideshow" class="container">
+   <div id="slideContent" ng-controller="HomeController" ng-repeat="project in projects">
+     <img id="slidepics" ng-src="{{project.image}}">
+   </div>
+</div>
+
+<div id="contactinfo" class="well well-sm">
+	<h2>Contact</h2>
+	<p class="lead"> email me at <a href="mailto:evan.cottingham94@gmail.com">evan.cottingham94@gmail.com</a>
+		or find me on <a href="https://www.facebook.com/evan.cottingham.94"> Facebook</a> or connect with me on
+		<a href="www.linkedin.com/in/evancottingham">LinkedIn</a></p>
+</div>

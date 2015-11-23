@@ -2,8 +2,98 @@
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 
+body{
+	background: #014069;
+}
+
 h1{
-	padding-top: 100px;
+	text-align: center;
+	color: #8BBCD7;
+	font-weight: bold;
+	text-shadow: 2px 2px #1A1F21;
+}
+
+#contactinfo h2 {
+	text-align: center;
+}
+
+#contactinfo p{
+	text-align: center;
+}
+
+#contactinfo{
+	background: #C6C8CA;
+}
+
+#projtitle{
+	text-align: center;
+	font-weight: bold;
+	font-size: 250%;
+}
+
+#commtitle{
+	color: black;
+}
+
+#slidepics{
+	width:100%;
+	height:100%;
+}
+
+.well-sm{
+	background: #a8a8a8;
+	margin-top: 30px;
+}
+
+#time{
+	float: right;
+}
+
+#commtext{
+	padding-left: 20px;
+}
+
+#subtitle{
+	text-align: center;
+	color: white;
+}
+
+#projdesc{
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-size: 150%;
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 80%; 
+    height: 800px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+	background: #013F67;
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+#projImg{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+#formdiv{
+	background: #222222;
 }
 
 #navbar,
@@ -48,7 +138,7 @@ h1{
 }
 #navbar #bg-one {
   height: 10px;
-  background: #2A6F09;
+  background: #013F67;
 }
 #navbar #bg-two {
   height: 59px;
@@ -83,7 +173,7 @@ h1{
   margin-bottom: 0px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  color: #46ba0f;
+  color: #0277B6;
   font-size: 18px;
   text-decoration: none;
 }
@@ -92,23 +182,15 @@ h1{
   border-bottom-left-radius: 3px;
 }
 #navbar ul li:hover{
-  background: #46ba0f;
-  background: -moz-linear-gradient(top, #55ba0f 0%, #46ba0f 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #55ba0f), color-stop(100%, #46ba0f));
-  background: -webkit-linear-gradient(top, #55ba0f 0%, #46ba0f 100%);
-  background: -o-linear-gradient(top, #55ba0f 0%, #46ba0f 100%);
-  background: -ms-linear-gradient(top, #55ba0f 0%, #46ba0f 100%);
-  background: linear-gradient(to bottom, #55ba0f 0%, #46ba0f 100%);
+  background: #0277B6;
+  background: -moz-linear-gradient(top, #204153 0%, #0277B6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #204153), color-stop(100%, #0277B6));
+  background: -webkit-linear-gradient(top, #204153 0%, #0277B6 100%);
+  background: -o-linear-gradient(top, #204153 0%, #0277B6 100%);
+  background: -ms-linear-gradient(top, #204153 0%, #0277B6 100%);
+  background: linear-gradient(to bottom, #204153 0%, #0277B6 100%);
 }
-#navbar ul li.active {
-  background: #2A6F09;
-  background: -moz-linear-gradient(top, #55ba0f 0%, #2A6F09 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #55ba0f), color-stop(100%, #2A6F09));
-  background: -webkit-linear-gradient(top, #55ba0f 0%, #46ba0f 100%);
-  background: -o-linear-gradient(top, #55ba0f 0%, #2A6F09 100%);
-  background: -ms-linear-gradient(top, #55ba0f 0%, #2A6F09 100%);
-  background: linear-gradient(to bottom, #55ba0f 0%, #2A6F09 100%);
-}
+
 #navbar ul li a:hover,
 #navbar ul li.active > a {
   background: url('bg.png');

@@ -1,0 +1,30 @@
+<h1> Let Me Know What You Think!</h1>
+
+<div ng-controller='CommentsController'>
+	<div id="formdiv" class="well well-sm">
+		<form name="comment-input" id="comment-input">
+
+			<!-- Bind model newTweet to a textarea element.
+				set a maximum length of 140 characters -->		
+			
+			<br>
+			<input placeholder="Name" ng-model="name" class="form-control" required></input> 
+			<br>
+			<textarea placeholder="Whats do you think?" ng-model="newComment" name="text" class="form-control" required></textarea>
+			<br>		
+			<!-- Tweet button -->
+			<div class="form-group send-tweet">
+				<!-- Execute the tweet function when clicked -->
+				<button ng-click="comment()" ng-disabled="comment-input.$invalid" type="submit" class="btn btn-primary">
+					share!
+				</button> 					
+			</div>
+		</form>
+	</div>
+	
+	<div id="commentdiv" class="well well-sm" ng-repeat="comment in comments">
+		<span id="time"><b>{{comment.time | date}}<b></span>
+		<h2 id="commtitle"><i>{{comment.name | uppercase}}</i> said:</h2>
+		<p id="commtext" class="lead">{{comment.text}}</p>
+	</div>
+</div>

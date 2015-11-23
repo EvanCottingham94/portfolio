@@ -1,0 +1,32 @@
+{
+	"projects": {
+		"dawgcoffee": {
+			"title": "Dawg Coffee",
+			"image": "dawg.png",
+			"link": "http://students.washington.edu/evanc94/info343/dawg-coffee/",
+			"descrip": "Designed the website for a fictional coffee shop named Dawg Coffee. Gained experience using Bootstrap CSS to apply styles and to build a mobile first website."
+			
+		},
+			
+		"policeshooting": {
+			"title": "Police Shootings Map",
+			"image": "police.png",
+			"link": "http://students.washington.edu/evanc94/info343/police-shootings/",
+			"descrip": "Visualized data of police shootings across the United States through an interactive map and a table. Gained experience using jQuery as well as in handling sensitive data."
+		},
+			
+		"crudapp": {
+			"title": "CRUD Application",
+			"image": "review.png",
+			"link": "http://students.washington.edu/evanc94/info343/review-assignment/",
+			"descrip": "Built a site that allows users to write reviews for a product and rate the product (1-5 stars). Practiced utilizing a cloud-based data storage web service, Parse.com, to store, and then visualize, user inputed information."
+		},
+			
+		"spotifyapi": {
+			"title": "EvTrackz (Spotify App)",
+			"image": "evtrackz.png",
+			"link": "http://students.washington.edu/evanc94/info343/SpotifyChallenge/",
+			"descrip": "Built a web application that uses the Spotify API. Practiced using AngularJS to retrieve data from an API. Also gained experience using a dynamic data storage service, Firebase. Implemented user authorization, user-specific content and data visualization from a database and an API using Angular and Firebase."
+		}
+	}
+}
